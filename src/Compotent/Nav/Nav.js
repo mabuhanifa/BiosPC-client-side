@@ -1,31 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="sm:flex items-center justify-around nav_main">
+    <div className="sm:flex items-center justify-around nav_main text-lg">
       <div>Logo</div>
       <nav>
         <ul className="navbar nav_i">
           <li className="mx-4">
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="mx-4">
-            <a href="/">Contact</a>
+            <Link to="/purchase">Purchase</Link>
           </li>
           <li className="mx-4">
-            <a href="/">Blog</a>
+            <Link to="/blogs">Blogs</Link>
           </li>
           <li className="mx-4">
-            <a href="/">About</a>
-          </li>
-          <li className="mx-4">
-            <a href="/">Services</a>
+            <Link to="/">About</Link>
           </li>
         </ul>
       </nav>
       <div>
-        <button className="btn btn-primary px-10 mx-4">Login</button>
-        <button className="btn btn-error px-10">Sign Up</button>
+           <ul className="navbar">
+           <li className="mx-4">
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li className="mx-4">
+            <Link to="/items">Add Item</Link>
+          </li>
+           </ul>
       </div>
     </div>
   );

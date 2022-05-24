@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  li {
+  .nav_main li {
     margin-bottom: 15px;
   }
   .q_n {

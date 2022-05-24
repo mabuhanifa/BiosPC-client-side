@@ -2,26 +2,26 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-neutral  font-inter text-slate-300">
+        <footer className="footer p-10 bg-neutral  font-inter text-slate-300 ">
   <div>
     <span className="footer-title">Services</span> 
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
-  </div> 
-  <div>
-    <span className="footer-title">Company</span> 
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
-  </div> 
-  <div>
-    <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
+    <a className="link link-hover" href='/#'>Branding</a>
+    <a className="link link-hover" href='/#'>Design</a>
+    <a className="link link-hover" href='/#'>Marketing</a>
+    <a className="link link-hover" href='/#'>Advertisement</a>
+  </div>  
+  <div> 
+    <span className="footer-title" href='/#'>Company</span> 
+    <a className="link link-hover" href='/#'>About us</a>
+    <a className="link link-hover" href='/#'>Contact</a>
+    <a className="link link-hover" href='/#'>Jobs</a>
+    <a className="link link-hover" href='/#'>Press kit</a>
+  </div>  
+  <div> 
+    <span className="footer-title" href='/#'>Legal</span> 
+    <a className="link link-hover" href='/#'>Terms of use</a>
+    <a className="link link-hover" href='/#'>Privacy policy</a>
+    <a className="link link-hover" href='/#'>Cookie policy</a>
   </div>
 </footer>
     );
