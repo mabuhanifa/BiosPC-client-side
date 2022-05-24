@@ -16,4 +16,7 @@
   li {
     margin-bottom: 15px;
   }
+  .q_n {
+    flex-direction: column;
+  }
 }

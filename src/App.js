@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Compotent/Home/Home";
 import Nav from "./Compotent/Nav/Nav";
+import Summary from "./Compotent/Summary/Summary";
 //import Footer from './Compotent/Footer/Footer';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
         {/* <Footer></Footer> */}
       </Routes>
+      <Summary></Summary>
     </div>
   );
 }
