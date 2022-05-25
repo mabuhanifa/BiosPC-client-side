@@ -4,6 +4,7 @@ import Blogs from "./Compotent/Blogs/Blogs";
 import Dashboard from "./Compotent/Dashboard/Dashboard";
 import Footer from "./Compotent/Footer/Footer";
 import Home from "./Compotent/Home/Home";
+import Items from "./Compotent/Items/Items";
 import Nav from "./Compotent/Nav/Nav";
 import NotFound from "./Compotent/NotFound/NotFound";
 import Purchase from "./Compotent/Puchase/Purchase";
@@ -17,7 +18,7 @@ function App() {
       <Route path="/blogs" element={<Blogs></Blogs>} />
       <Route path="/purchase" element={<Purchase></Purchase>} />
       <Route path="/dashboard" element={<Dashboard></Dashboard>} />
-      <Route path="/items" element={<Dashboard></Dashboard>} />
+      <Route path="/items" element={<Items></Items>} />
 
       <Route path="*" element={<NotFound></NotFound>}/>
       </Routes>
