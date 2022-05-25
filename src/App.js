@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import About from "./Compotent/About/About";
 import Blogs from "./Compotent/Blogs/Blogs";
 import Dashboard from "./Compotent/Dashboard/Dashboard";
 import Footer from "./Compotent/Footer/Footer";
@@ -19,6 +20,7 @@ function App() {
       <Route path="/purchase" element={<Purchase></Purchase>} />
       <Route path="/dashboard" element={<Dashboard></Dashboard>} />
       <Route path="/items" element={<Items></Items>} />
+      <Route path="/about" element={<About></About>} />
 
       <Route path="*" element={<NotFound></NotFound>}/>
       </Routes>

@@ -44,7 +44,7 @@ const Dashboard = () => {
       <th scope="col">Supplier</th>
       <th scope="col">Price</th>
       <th scope="col">Quantity</th>
-      <th scope="col">Minimum Order Quantity</th>
+      <th scope="col"><small className='t-xs'>Minimum <br /> Order <br />  Quantity</small></th>
       <th scope="col">Update</th>
       <th scope="col">Delete</th>
       

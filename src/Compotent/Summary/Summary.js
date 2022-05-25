@@ -15,7 +15,7 @@ const Summary = () => {
       </div>
       <div class="divider"></div>
 
-      <div className="grid grid-cols-4 gap-4 mt-6">
+      <div className="grid grid-rows-1 sm:grid-cols-4 gap-4 mt-6">
         <div className="mx-auto p-4 ">
           <span className="text-6xl text-accent">
             <AiOutlineFlag></AiOutlineFlag>

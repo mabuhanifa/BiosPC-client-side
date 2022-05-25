@@ -11,8 +11,9 @@ const Items = () => {
     const quantity= event.target.quantity.value;
     const img= event.target.img.value;
     const info= event.target.info.value;
+    const moq= event.target.moq.value;
     
-    const user = {name,price,supplier,quantity,img,info};
+    const user = {name,price,supplier,quantity,img,info,moq};
 
     fetch("http://localhost:5000/products", {
         method: "POST",
@@ -44,7 +45,7 @@ const Items = () => {
           />
 
           <input
-            type="Number"
+            type="number"
             placeholder="Price"
             name="price"
             class="block input input-bordered w-full max-w-xs mb-4"
@@ -54,6 +55,12 @@ const Items = () => {
             type="number"
             placeholder="Quantity"
             name="quantity"
+            class="block input input-bordered w-full max-w-xs mb-4"
+          />
+          <input
+            type="number"
+            placeholder="Minimum Order Quantity"
+            name="moq"
             class="block input input-bordered w-full max-w-xs mb-4"
           />
 

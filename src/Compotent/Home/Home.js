@@ -1,12 +1,11 @@
 import React from 'react';
-import Summary from '../Summary/Summary';
+import About from '../About/About';
 
 const Home = () => {
     return (
         <div>
-            Home
-            
-      <Summary></Summary>
+      
+      <About></About>
         </div>
     );
 };

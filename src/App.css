@@ -5,6 +5,10 @@
   list-style: none;
   box-sizing: border-box;
 }
+.t-xs {
+  font-size: 12px;
+}
+
 @media only screen and (max-width: 700px) {
   .nav_main,
   .nav_i {
@@ -18,5 +22,11 @@
   }
   .q_n {
     flex-direction: column;
+  }
+  .a-b-t {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
