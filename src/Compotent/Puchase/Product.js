@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Product = ({product} ) => {
     const {name, price,quantity,moq, supplier,img,info} = product;
@@ -20,9 +21,9 @@ const Product = ({product} ) => {
     <p>Available Quantity : {quantity} </p>
     <p>Minimum Order Quantity : { moq} </p>
     <p>Description: {readText}<span className='btn btn-info btn-xs'  onClick={readmore}>{read ? "...Read more" : "...Read Less" }</span></p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary block mx-auto text-white w-full my-5">Buy Now</button>
-    </div>
+    
+      <Link to={`/purchase/${product._id}`}><button class="btn btn-primary block mx-auto text-white w-full my-5">Buy Now</button></Link>
+    
   </div>
 </div>
     );

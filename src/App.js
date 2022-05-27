@@ -12,6 +12,7 @@ import Login from "./Compotent/Login/Login";
 import Nav from "./Compotent/Nav/Nav";
 import NotFound from "./Compotent/NotFound/NotFound";
 import Purchase from "./Compotent/Puchase/Purchase";
+import PurchaseProducts from "./Compotent/Puchase/PurchaseProducts";
 import SignUp from "./Compotent/Signup/Signup";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Route path="/login" element={<Login></Login>} />
       <Route path="/signup" element={<SignUp></SignUp>} />
       <Route path="/update/:id" element={<UpdateItem></UpdateItem>} />
+      <Route path="/purchase/:id" element={<PurchaseProducts></PurchaseProducts>} />
 
       <Route path="*" element={<NotFound></NotFound>}/>
       </Routes>

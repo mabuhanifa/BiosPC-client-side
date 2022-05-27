@@ -17,8 +17,6 @@ const UpdateItem = () => {
         });
     },[id]);
 
-console.log(products);
-
   const restock = (event) => {
     event.preventDefault();
     const restock = parseInt(event.target.restock.value);

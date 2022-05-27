@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -43,7 +42,6 @@ const Dashboard = () => {
       <th scope="col">Price</th>
       <th scope="col">Quantity</th>
       <th scope="col"><small className='t-xs'>Minimum <br /> Order <br />  Quantity</small></th>
-      <th scope="col">Update</th>
       <th scope="col">Delete</th>
       
     </tr>
@@ -56,7 +54,6 @@ const Dashboard = () => {
                     <td>${products.price}</td>
                     <td>{products.quantity}</td>
                     <td>{products.moq}</td>
-                    <td><Link to={`/update/${products._id}`}><button className='btn btn-primary'>Update</button></Link></td>
                     <td><button className='btn btn-error' onClick={() => deleteItem(products._id)}> Delete</button></td>
                     </tr>)}
   </tbody>
