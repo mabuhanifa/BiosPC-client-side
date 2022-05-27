@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const PurchaseProducts = () => {
   const { id } = useParams();
@@ -19,20 +20,21 @@ const PurchaseProducts = () => {
   }, []);
   const purchase = (event) => {
     event.preventDefault();
-    const moq = event.target.moq.value;
+    const productName = products.name;
+    const orderedQuantity = event.target.moq.value;
     const name = event.target.name.value;
     const email = event.target.email.value;
     const phone = event.target.phone.value;
-    console.log(name, email, phone, moq);
-    if (moq < moqNumber) {
+    console.log(productName,name, email, phone, orderedQuantity);
+    if (orderedQuantity < moqNumber) {
       seterrorClass('text-error');
       return;
-    } else if (moq > quantityNumber) {
+    } else if (orderedQuantity > quantityNumber) {
         seterrorClass('text-error');
         return;
     }
-    const buyer = { name, email, phone, moq };
-    fetch(`http://localhost:5000/purchase/${id}`, {
+    const buyer = {productName, name, email, phone, orderedQuantity };
+    fetch("http://localhost:5000/sold", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -42,7 +44,7 @@ const PurchaseProducts = () => {
     .then((res) => res.json())
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
-    toast.success('Item added successfully');
+    toast.success('Item buy request sent successfully');
     event.target.reset();
 
     };

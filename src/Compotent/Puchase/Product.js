@@ -7,7 +7,7 @@ const Product = ({product} ) => {
     const readmore = () => {
         setRead(!read);
     };
-    const readText = read ? info.slice(0,200) : info;
+    const readText = read? info?.slice(0,200) : info;
 
 
     

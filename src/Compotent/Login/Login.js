@@ -1,21 +1,25 @@
 import React from "react";
-import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { BsGoogle } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 const Login = () => {
-  const [signInWithGoogle, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, gLoading, gError] = useSignInWithGoogle(auth);
+  const [signInWithEmailAndPassword,user,loading,error,] = useSignInWithEmailAndPassword(auth);
   const { register, formState: { errors }, handleSubmit } = useForm();
   const navigate = useNavigate();
-  const [user]= useAuthState(auth);
   if (user) {
     navigate("/purchase");
   }
 
   const onSubmit = (data) => {
-    console.log(data);
+    signInWithEmailAndPassword(data.email, data.password);
   };
+  let signInError;
+  if(error || gError){
+    signInError = <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
+}
 
   return (
     <div className='flex h-screen justify-center items-center'>
@@ -73,10 +77,10 @@ const Login = () => {
                             </label>
                         </div>
 
-                        {/* {signInError} */}
+                        {signInError}
                         <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
                     </form>
-                    <p><small>New to BiosPC <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                    <p><small>New to Doctors Portal <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
@@ -84,7 +88,7 @@ const Login = () => {
                     > 
                         <span className="text-2xl font-bold mr-4">
                         <BsGoogle></BsGoogle>
-                        </span> Continue with Google</button>
+                        </span>Continue with Google</button>
                 </div>
             </div>
         </div >
