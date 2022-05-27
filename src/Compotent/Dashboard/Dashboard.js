@@ -14,8 +14,6 @@ const Dashboard = () => {
         });
     },[]);
     const deleteItem = (id) => {
-
-        
         const proceed = window.confirm('Are you sure you want to delete this item?');
         if(proceed){
             const url = `http://localhost:5000/products/${id}`;
@@ -33,9 +31,9 @@ const Dashboard = () => {
         }
     };
     return (
-        <div>
+        <div className='w-fit mx-auto'>
             <ToastContainer></ToastContainer>
-            <div >
+            <div className='mt-10' >
             <table className="table">
   <thead>
     <tr>

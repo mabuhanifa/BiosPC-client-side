@@ -1,14 +1,16 @@
 import React from "react";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { BsGoogle } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 const Login = () => {
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, loading, error] = useSignInWithGoogle(auth);
   const { register, formState: { errors }, handleSubmit } = useForm();
+  const navigate = useNavigate();
+  const [user]= useAuthState(auth);
   if (user) {
-    console.log(user);
+    navigate("/purchase");
   }
 
   const onSubmit = (data) => {
