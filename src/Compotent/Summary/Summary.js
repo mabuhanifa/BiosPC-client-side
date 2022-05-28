@@ -6,7 +6,7 @@ import { VscFeedback } from "react-icons/vsc";
 const Summary = () => {
   return (
     <>
-      <div className="text-center text-gray-500">
+      <div className="text-center text-gray-500 ">
         <h1 className="sm:stat-value sm:text-5xl m-4">Millions Business Trust Us</h1>
         <h2 className="sm:stat-value sm:text-3xl">
           We always try to understand our user expectations.
