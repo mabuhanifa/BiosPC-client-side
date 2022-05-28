@@ -4,7 +4,7 @@
 
 ## [Client-Side Code link](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-mabuhanifa)
 
-- Snap Master is a full stack MERN website
+- BiosPC is a full stack MERN website
 - MONGODB has been used as Database
 - Express js has been used as nodejs framework
 - This is a React SPA (Single Page App) built with firebase authentication
