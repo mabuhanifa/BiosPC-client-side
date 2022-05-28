@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { BsGoogle } from "react-icons/bs";
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-//import useToken from '../../hooks/useToken';
 import Loading from '../Loading/Loading';
 
 const SignUp = () => {
@@ -19,8 +18,6 @@ const SignUp = () => {
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    //const [token]  = useToken(user || gUser);
-
     const navigate = useNavigate();
 
     let signInError;
@@ -33,7 +30,7 @@ const SignUp = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (user) {navigate('/purchase');}
+    if (user || gUser) {navigate('/purchase');}
     
 
     const onSubmit = async data => {
