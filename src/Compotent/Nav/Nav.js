@@ -33,14 +33,9 @@ const Nav = () => {
       </nav>
       <div>
            <ul className="navbar font-bold">
-           
-          <li className="mx-4">
-            <Link to="/items">Add Item</Link>
-          </li>
-           
-          <li className="mx-4">
+          {user &&<li className="mx-4">
             <Link to="/dashboard">Dashboard</Link>
-          </li> 
+          </li> }
           {user ? <button className="btn btn-error" onClick={()=>signOut(auth)}>Logout</button> : <li className="mx-4">
             <Link to="/login">Login</Link>
           </li> }

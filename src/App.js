@@ -2,7 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./Compotent/About/About";
 import Blogs from "./Compotent/Blogs/Blogs";
+import AllProducts from "./Compotent/Dashboard/AllProducts";
 import Dashboard from "./Compotent/Dashboard/Dashboard";
+import Users from "./Compotent/Dashboard/Users";
 import Footer from "./Compotent/Footer/Footer";
 import Home from "./Compotent/Home/Home";
 import RequireAuth from "./Compotent/hooks/requiredAuth";
@@ -25,8 +27,15 @@ function App() {
       <Route path="/purchase" element={
         <RequireAuth>
       <Purchase></Purchase></RequireAuth>} />
-      <Route path="/dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>} />
-      <Route path="/items" element={<Items></Items>} />
+      <Route path="/dashboard" element={<RequireAuth>
+        <Dashboard></Dashboard>
+        </RequireAuth>} >
+          {/* <Route index element={<AllProducts></AllProducts>}></Route> */}
+          <Route path="/dashboard/additem" element={<Items></Items>}></Route>
+          <Route path="/dashboard/allproducts"  element={<AllProducts></AllProducts>}></Route>
+          <Route path="/dashboard/users"  element={<Users></Users>}></Route>
+        
+      </Route>
       <Route path="/about" element={<About></About>} />
       <Route path="/login" element={<Login></Login>} />
       <Route path="/signup" element={<SignUp></SignUp>} />

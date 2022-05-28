@@ -31,11 +31,11 @@ const Items = () => {
   };
   return (
     <div className="flex">
-      <div className="w-2/4">
-        <h4>Add items</h4>
+      
         <ToastContainer />
-      </div>
-      <div className="m-20 w-2/4 h-full mx-auto">
+      
+      <div className="m-20 w-96 h-full mx-auto">
+        <h4 className="text-2xl text-center my-10"> Add Products</h4>
         <form onSubmit={handleAddItem}>
           <input
             type="text"

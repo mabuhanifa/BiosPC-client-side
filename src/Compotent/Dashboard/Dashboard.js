@@ -1,65 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Dashboard = () => {
-    const[products,setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/products')
-        .then(res => res.json())
-        .then(data => { 
-            setProducts(data);
-        });
-    },[]);
-    const deleteItem = (id) => {
-        const proceed = window.confirm('Are you sure you want to delete this item?');
-        if(proceed){
-            const url = `http://localhost:5000/products/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data.deletedCount > 0){   
-                    const remaining = products.filter(products => products._id !== id);
-                    setProducts( remaining );
-                    toast.success("Item deleted successfully", { type: "success" });
-                }
-            });
-        }
-    };
     return (
-        <div className='w-fit mx-auto'>
-            <ToastContainer></ToastContainer>
-            <div className='mt-10' >
-            <table className="table">
-  <thead>
-    <tr>
-    <th scope="col">Image</th>
-      <th scope="col">Product Name</th>
-      <th scope="col">Supplier</th>
-      <th scope="col">Price</th>
-      <th scope="col">Quantity</th>
-      <th scope="col"><small className='t-xs'>Minimum <br /> Order <br />  Quantity</small></th>
-      <th scope="col">Delete</th>
+
       
-    </tr>
-  </thead>
-  <tbody>
-  {products.map(products => <tr key={products._id}>
-                    <td><img className='w-10' src={products.img} alt="" /></td> 
-                    <td>{products.name}</td> 
-                    <td>{products.supplier}</td>
-                    <td>${products.price}</td>
-                    <td>{products.quantity}</td>
-                    <td>{products.moq}</td>
-                    <td><button className='btn btn-error' onClick={() => deleteItem(products._id)}> Delete</button></td>
-                    </tr>)}
-  </tbody>
-</table>
-            </div>
-        </div>
+        <div className="drawer drawer-mobile">
+  <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+  <div className="drawer-content">
+  <label for="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open Dashboard</label>
+      <h4 className='text-4xl text-center mt-10'>DashBoard</h4>
+    <Outlet></Outlet>
+    
+  
+  </div> 
+  <div className="drawer-side">
+    <label for="my-drawer-2" className="drawer-overlay"></label> 
+    <ul className="menu p-4 overflow-y-auto w-80 text-base-content bg-slate-200 rounded-lg">
+      {/* <-- Sidebar content here --> */}
+      <li className='bg-gray-300 font-bold'><Link to="/dashboard/additem">Add Product</Link></li>
+      <li className='bg-gray-300 font-bold'><Link to="/dashboard/allproducts">All Produtcs</Link></li>
+      <li className='bg-gray-300 font-bold'><Link to="/dashboard/users">Users</Link></li>
+      <li className='bg-gray-300 font-bold'><Link to="/dashboard/reviews">All Produtcs</Link></li>
+      <li className='bg-gray-300 font-bold'><Link to="/dashboard/allproducts">All Produtcs</Link></li>
+    </ul>
+  
+  </div>
+</div>
+        
     );
 };
 
