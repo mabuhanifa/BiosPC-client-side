@@ -4,6 +4,7 @@ import About from "./Compotent/About/About";
 import Blogs from "./Compotent/Blogs/Blogs";
 import AllProducts from "./Compotent/Dashboard/AllProducts";
 import Dashboard from "./Compotent/Dashboard/Dashboard";
+import Sold from "./Compotent/Dashboard/Sold";
 import Users from "./Compotent/Dashboard/Users";
 import Footer from "./Compotent/Footer/Footer";
 import Home from "./Compotent/Home/Home";
@@ -15,6 +16,7 @@ import Nav from "./Compotent/Nav/Nav";
 import NotFound from "./Compotent/NotFound/NotFound";
 import Purchase from "./Compotent/Puchase/Purchase";
 import PurchaseProducts from "./Compotent/Puchase/PurchaseProducts";
+import Reviews from "./Compotent/Reviews/Reviews";
 import SignUp from "./Compotent/Signup/Signup";
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
           <Route path="/dashboard/additem" element={<Items></Items>}></Route>
           <Route path="/dashboard/allproducts"  element={<AllProducts></AllProducts>}></Route>
           <Route path="/dashboard/users"  element={<Users></Users>}></Route>
+          <Route path="/dashboard/sold"  element={<Sold></Sold>}></Route>
+          <Route path="/dashboard/reviews"  element={<Reviews></Reviews>}></Route>
         
       </Route>
       <Route path="/about" element={<About></About>} />
