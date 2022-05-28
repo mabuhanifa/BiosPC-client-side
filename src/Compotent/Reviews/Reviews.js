@@ -32,7 +32,7 @@ const Items = () => {
         <ToastContainer />
       
       <div className="m-20 w-96 h-full mx-auto">
-        <h4 className="text-2xl text-center my-10"> Add Products</h4>
+        <h4 className="text-2xl text-center my-10"> Add Your Review</h4>
         <form onSubmit={addReview}>
           <input
             type="text"
