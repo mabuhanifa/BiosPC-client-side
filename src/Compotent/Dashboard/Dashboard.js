@@ -22,7 +22,7 @@ const Dashboard = () => {
       <li className='bg-gray-300 font-bold'><Link to="/dashboard/additem">Add Product</Link></li>
       <li className='bg-gray-300 font-bold'><Link to="/dashboard/allproducts">All Produtcs</Link></li>
       <li className='bg-gray-300 font-bold'><Link to="/dashboard/users">Users</Link></li>
-      <li className='bg-gray-300 font-bold'><Link to="/dashboard/reviews">Add Review</Link></li>
+      <li className='bg-gray-300 font-bold'><Link to="/dashboard/reviews">Add Your Review</Link></li>
       <li className='bg-gray-300 font-bold'><Link to="/dashboard/sold">Sold Products</Link></li>
     </ul>
   

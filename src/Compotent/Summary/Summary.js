@@ -7,9 +7,8 @@ const Summary = () => {
   return (
     <>
       <div className="text-center text-gray-500">
-        <h1 className="stat-value text-5xl m-4">Millions Business Trust Us</h1>
-        <h2 className="stat-value text-3xl">
-          {" "}
+        <h1 className="sm:stat-value sm:text-5xl m-4">Millions Business Trust Us</h1>
+        <h2 className="sm:stat-value sm:text-3xl">
           We always try to understand our user expectations.
         </h2>
       </div>
@@ -49,15 +48,15 @@ const Summary = () => {
 
       <div className="mx-40 p-10 flex shadow-lg q_n">
           <div>
-            <h2 className="stat-value text-2xl text-accent"> Have any question about us or 
+            <h2 className="sm:stat-value sm:text-2xl text-accent"> Have any question about us or 
             got a product request?</h2>
-            <p className="text-xl text-neutral">
+            <p className="sm:text-xl text-neutral">
                 Don't hesitate to contact us.
             </p>
           </div>
           <div className="mx-auto ">
-              <button className="btn btn-accent text-white ml-10">Request For Quote</button>
-              <button className="btn btn-dark ml-10">Contact Us</button>
+              <button className="btn btn-accent text-white ml-10 text-xs">Request For Quote</button>
+              <button className="btn btn-dark ml-10 sm:text-xs">Contact Us</button>
           </div>
       </div>
     </>

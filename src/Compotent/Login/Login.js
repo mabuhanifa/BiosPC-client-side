@@ -5,11 +5,11 @@ import { BsGoogle } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 const Login = () => {
-  const [signInWithGoogle, gLoading, gError] = useSignInWithGoogle(auth);
+  const [signInWithGoogle,gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword,user,loading,error,] = useSignInWithEmailAndPassword(auth);
   const { register, formState: { errors }, handleSubmit } = useForm();
   const navigate = useNavigate();
-  if (user) {
+  if (user || gUser) {
     navigate("/purchase");
   }
 
