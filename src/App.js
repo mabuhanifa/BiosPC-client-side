@@ -12,6 +12,7 @@ import RequireAuth from "./Compotent/hooks/requiredAuth";
 import Items from "./Compotent/Items/Items";
 import UpdateItem from "./Compotent/Items/UpdateItem";
 import Login from "./Compotent/Login/Login";
+import MyFortfolio from "./Compotent/MyFortfolio.js/MyFortfolio";
 import Nav from "./Compotent/Nav/Nav";
 import NotFound from "./Compotent/NotFound/NotFound";
 import Purchase from "./Compotent/Puchase/Purchase";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/dashboard/users"  element={<Users></Users>}></Route>
           <Route path="/dashboard/sold"  element={<Sold></Sold>}></Route>
           <Route path="/dashboard/reviews"  element={<Reviews></Reviews>}></Route>
+          <Route path="/dashboard/myportfolio"  element={<MyFortfolio></MyFortfolio>}></Route>
         
       </Route>
       <Route path="/about" element={<About></About>} />

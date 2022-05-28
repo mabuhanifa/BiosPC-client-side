@@ -15,7 +15,7 @@ const Items = () => {
     
     const user = {name,price,supplier,quantity,img,info,moq};
 
-    fetch("http://localhost:5000/products", {
+    fetch("https://murmuring-brushlands-50505.herokuapp.com/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

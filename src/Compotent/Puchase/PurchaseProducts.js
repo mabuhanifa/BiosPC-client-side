@@ -12,7 +12,7 @@ const PurchaseProducts = () => {
  const quantityNumber = parseInt(quantity);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://murmuring-brushlands-50505.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -34,7 +34,7 @@ const PurchaseProducts = () => {
         return;
     }
     const buyer = {productName, name, email, phone, orderedQuantity };
-    fetch("http://localhost:5000/sold", {
+    fetch("https://murmuring-brushlands-50505.herokuapp.com/sold", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

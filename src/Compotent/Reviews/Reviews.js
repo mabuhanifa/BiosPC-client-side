@@ -12,7 +12,7 @@ const Items = () => {
     
     const reviews = {name,img, review, rating};
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://murmuring-brushlands-50505.herokuapp.com/reviews", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
