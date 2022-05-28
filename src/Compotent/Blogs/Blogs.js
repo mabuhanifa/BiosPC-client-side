@@ -38,7 +38,7 @@ const Blogs = () => {
             <div className='m-40 text-lg'>
                 <h1 className='text-2xl font-bold text-center py-10' >What are the different ways to manage a state in a React application?</h1>
 
-                <p>There are four main types of state Which can be applied to manage state in React apps. They are :
+                <p>There are four main types of state that are needed to properly manage in React apps. They are :
 
 
 
@@ -51,6 +51,10 @@ const Blogs = () => {
                      <li>URL state</li>
 
                      </ul>
+
+                     <p className='my-5'>
+
+                     </p>
                      </p>
 
 
@@ -66,11 +70,12 @@ const Blogs = () => {
 
             </div>
             <div className='m-40 text-lg'>
-                <h1 className='text-xl font-bold text-center py-10' >Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts</h1>
+                <h1 className='text-xl font-bold text-center py-10' >Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts 
+                </h1>
 
                 <p>
                     The reason why you do not set the state directly in React is because you are not allowed to modify the state directly.
-                    You can only modify the state by using the setProducts function. This is a good practice because it prevents you from modifying the state directly. 
+                    You can only modify the state by using the setProducts function. This is a good practice because it prevents you from modifying the state directly.Using useState hook is one solution, useState is a hook that returns an array of two elements. The first element is the current state and the second element is a function that allows you to update the state. The useState function is a hook that returns an array of two elements. The first element is the current state and the second element is a function that allows you to update the state. The useState function is a hook that returns an array of two elements. 
                     </p>
             </div>
             <div className='m-40 text-lg'>
