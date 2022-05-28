@@ -1,4 +1,4 @@
-# [SnapMaster Live Websit](https://mern-last-assignment.web.app)
+# [BiosPC Live Websit](https://mern-last-assignment.web.app)
 
 ## [Server-Side Code link](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-mabuhanifa)
 
