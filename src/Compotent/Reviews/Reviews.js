@@ -12,7 +12,7 @@ const Items = () => {
     
     const reviews = {name,img, review, rating};
 
-    fetch("https://murmuring-brushlands-50505.herokuapp.com/reviews", {
+    fetch("https://biospc-server-side-production.up.railway.app/reviews", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

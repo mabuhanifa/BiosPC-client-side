@@ -10,7 +10,7 @@ const UpdateItem = () => {
   const[products,setProducts] = useState({});
 
     useEffect(() => {
-        fetch(`https://murmuring-brushlands-50505.herokuapp.com/products/${id}`)
+        fetch(`https://biospc-server-side-production.up.railway.app/products/${id}`)
         .then(res => res.json())
         .then(data => { 
             setProducts(data);
@@ -20,7 +20,7 @@ const UpdateItem = () => {
   const restock = (event) => {
     event.preventDefault();
     const restock = parseInt(event.target.restock.value);
-    const url = `https://murmuring-brushlands-50505.herokuapp.com/products/${id}`;
+    const url = `https://biospc-server-side-production.up.railway.app/products/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -39,7 +39,7 @@ const UpdateItem = () => {
   };
   
   const deliver = (event) => {
-    const url = `https://murmuring-brushlands-50505.herokuapp.com/products/${id}`;
+    const url = `https://biospc-server-side-production.up.railway.app/products/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -67,7 +67,7 @@ const UpdateItem = () => {
     const updatedProducts = { name,img, price, supplier, quantity,info };
 
     // send data to the server
-    const url = `https://murmuring-brushlands-50505.herokuapp.com/products/${id}`;
+    const url = `https://biospc-server-side-production.up.railway.app/products/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

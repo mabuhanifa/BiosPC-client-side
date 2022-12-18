@@ -33,7 +33,6 @@ function App() {
       <Route path="/dashboard" element={<RequireAuth>
         <Dashboard></Dashboard>
         </RequireAuth>} >
-          {/* <Route index element={<AllProducts></AllProducts>}></Route> */}
           <Route index element={<AllProducts></AllProducts>}></Route>
           <Route path="/dashboard/additem" element={<Items></Items>}></Route>
           <Route path="/dashboard/allproducts"  element={<AllProducts></AllProducts>}></Route>

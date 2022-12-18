@@ -12,7 +12,7 @@ const PurchaseProducts = () => {
  const quantityNumber = parseInt(quantity);
 
   useEffect(() => {
-    fetch(`https://murmuring-brushlands-50505.herokuapp.com/products/${id}`)
+    fetch(`https://biospc-server-side-production.up.railway.app/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -34,7 +34,7 @@ const PurchaseProducts = () => {
         return;
     }
     const buyer = {productName, name, email, phone, orderedQuantity };
-    fetch("https://murmuring-brushlands-50505.herokuapp.com/sold", {
+    fetch("https://biospc-server-side-production.up.railway.app/sold", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

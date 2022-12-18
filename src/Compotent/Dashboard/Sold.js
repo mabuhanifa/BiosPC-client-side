@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Sold = () => {
     const [sold , setSold] = useState([]);
     useEffect(() => {
-        fetch('https://murmuring-brushlands-50505.herokuapp.com/sold')
+        fetch('https://biospc-server-side-production.up.railway.app/sold')
             .then(res => res.json())
             .then(data => setSold(data));
     }, []);

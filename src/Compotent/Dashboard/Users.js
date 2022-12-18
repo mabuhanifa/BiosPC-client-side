@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Users = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://murmuring-brushlands-50505.herokuapp.com/users')
+        fetch('https://biospc-server-side-production.up.railway.app/users')
             .then(res => res.json())
             .then(data => setUsers(data));
     }, []);

@@ -5,7 +5,7 @@ const Reviewsall = () => {
     const [reviewz, setReviewz] = useState([]);
     
     useEffect(() => {
-        fetch('https://murmuring-brushlands-50505.herokuapp.com/reviews')
+        fetch('https://biospc-server-side-production.up.railway.app/reviews')
             .then(res => res.json())
             .then(data => setReviewz(data));
     }, []);

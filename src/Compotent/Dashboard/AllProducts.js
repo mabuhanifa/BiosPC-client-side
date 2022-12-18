@@ -6,7 +6,7 @@ const AllProducts = () => {
     const[products,setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://murmuring-brushlands-50505.herokuapp.com/products')
+        fetch('https://biospc-server-side-production.up.railway.app/products')
         .then(res => res.json())
         .then(data => { 
             setProducts(data);
@@ -15,7 +15,7 @@ const AllProducts = () => {
     const deleteItem = (id) => {
         const proceed = window.confirm('Are you sure you want to delete this item?');
         if(proceed){
-            const url = `https://murmuring-brushlands-50505.herokuapp.com/products/${id}`;
+            const url = `https://biospc-server-side-production.up.railway.app/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

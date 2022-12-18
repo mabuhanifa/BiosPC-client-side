@@ -15,7 +15,7 @@ const Items = () => {
     
     const user = {name,price,supplier,quantity,img,info,moq};
 
-    fetch("https://murmuring-brushlands-50505.herokuapp.com/products", {
+    fetch("https://biospc-server-side-production.up.railway.app/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
