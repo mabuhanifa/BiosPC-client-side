@@ -12,7 +12,7 @@ const PurchaseProducts = () => {
  const quantityNumber = parseInt(quantity);
 
   useEffect(() => {
-    fetch(`https://biospc-server-side-production.up.railway.app/products/${id}`)
+    fetch(`https://bios-pc.onrender.com/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -34,7 +34,7 @@ const PurchaseProducts = () => {
         return;
     }
     const buyer = {productName, name, email, phone, orderedQuantity };
-    fetch("https://biospc-server-side-production.up.railway.app/sold", {
+    fetch("https://bios-pc.onrender.com/sold", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

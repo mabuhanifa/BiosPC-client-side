@@ -12,7 +12,7 @@ const Items = () => {
     
     const reviews = {name,img, review, rating};
 
-    fetch("https://biospc-server-side-production.up.railway.app/reviews", {
+    fetch("https://bios-pc.onrender.com/reviews", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

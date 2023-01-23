@@ -15,7 +15,7 @@ const Items = () => {
     
     const user = {name,price,supplier,quantity,img,info,moq};
 
-    fetch("https://biospc-server-side-production.up.railway.app/products", {
+    fetch("https://bios-pc.onrender.com/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

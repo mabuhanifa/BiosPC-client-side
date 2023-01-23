@@ -6,7 +6,7 @@ const AllProducts = () => {
     const[products,setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://biospc-server-side-production.up.railway.app/products')
+        fetch('https://bios-pc.onrender.com/products')
         .then(res => res.json())
         .then(data => { 
             setProducts(data);
@@ -15,7 +15,7 @@ const AllProducts = () => {
     const deleteItem = (id) => {
         const proceed = window.confirm('Are you sure you want to delete this item?');
         if(proceed){
-            const url = `https://biospc-server-side-production.up.railway.app/products/${id}`;
+            const url = `https://bios-pc.onrender.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

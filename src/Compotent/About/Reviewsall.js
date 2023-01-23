@@ -5,7 +5,7 @@ const Reviewsall = () => {
     const [reviewz, setReviewz] = useState([]);
     
     useEffect(() => {
-        fetch('https://biospc-server-side-production.up.railway.app/reviews')
+        fetch('https://bios-pc.onrender.com/reviews')
             .then(res => res.json())
             .then(data => setReviewz(data));
     }, []);

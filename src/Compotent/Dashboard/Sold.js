@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Sold = () => {
     const [sold , setSold] = useState([]);
     useEffect(() => {
-        fetch('https://biospc-server-side-production.up.railway.app/sold')
+        fetch('https://bios-pc.onrender.com/sold')
             .then(res => res.json())
             .then(data => setSold(data));
     }, []);
